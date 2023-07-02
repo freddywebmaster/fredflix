@@ -11,7 +11,7 @@ export default function Browse() {
   return (
     <Layout>
       <Head>
-        <title>Netflix Clone made by Alex Daniel</title>
+        <title>Netflix Clone made by FWebMaster</title>
       </Head>
       <div style={{ overflowX: "hidden" }}>
         {allMovies.length !== 0 && (
