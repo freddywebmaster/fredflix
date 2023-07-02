@@ -1,0 +1,92 @@
+/* Shrink based on vw */
+.btnResponsive {
+  display: inline-block;
+  padding: 0.6vw 1.2vw;
+  font-size: 1.2vw;
+  border-radius: 5px;
+  margin-right: 20px;
+  font-weight: bold;
+  color: #333;
+  background: #f3f3f3;
+  transition: background 100ms;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+.btnResponsive:hover {
+  background: #dadada;
+}
+.btnResponsive:last-of-type {
+  margin-right: 0;
+}
+.btnResponsive i {
+  font-size: 1.2vw;
+  margin-right: 1vw;
+}
+.btnResponsive:disabled,
+.btnResponsive[disabled] {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+@media screen and (max-width: 1400px) {
+  .btnResponsive {
+    display: inline-block;
+    padding: 0.6vw 1.2vw;
+    font-size: 1.8vw;
+  }
+  .btnResponsive i {
+    font-size: 1.8vw;
+    margin-right: 1vw;
+  }
+}
+/* Static button */
+.btn {
+  display: block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin-right: 20px;
+  font-weight: bold;
+  background: #f3f3f3;
+  color: #333;
+  transition: background 100ms;
+}
+.btn:last-of-type {
+  margin-right: 0;
+}
+.btn:hover {
+  background: #dadada;
+}
+.btn i {
+  font-size: 1rem;
+  margin-right: 10px;
+}
+.btn:disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+/* btn large */
+.btnLarge {
+  display: block;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  margin-right: 20px;
+  font-weight: bold;
+  background: #f3f3f3;
+  color: #333;
+  transition: background 100ms;
+}
+.btnLarge:last-of-type {
+  margin-right: 0;
+}
+.btnLarge:hover {
+  background: #dadada;
+}
+.btnLarge i {
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+.btnLarge:disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+}

@@ -1,0 +1,33 @@
+.modal__about {
+  padding: 0 60px 60px 60px;
+}
+.modal__about__movieName {
+  margin-bottom: 20px;
+}
+.modal__about p {
+  margin-bottom: 7px;
+}
+.modal__about span {
+  color: grey;
+  margin-right: 5px;
+}
+.modal__about p:last-child {
+  margin-bottom: 0px;
+}
+.modal__about a {
+  color: white;
+  margin-right: 10px;
+  padding: 2px 0;
+  display: inline-block;
+}
+.modal__about a::after {
+  content: ",";
+}
+.modal__about a:last-child::after {
+  content: "";
+}
+@media screen and (max-width: 800px) {
+  .modal__about {
+    padding: 20px 20px 60px 20px;
+  }
+}

@@ -1,0 +1,23 @@
+.form {
+  position: relative;
+  padding: 50px;
+  width: 100%;
+  border: solid #202020 1px;
+  background: #000;
+  border-radius: 5px;
+}
+
+.form p {
+  color: #777;
+  margin-top: 20px;
+}
+
+.form p a {
+  color: #e50914;
+}
+
+@media screen and (max-width: 800px) {
+  .form {
+    margin: 20px;
+  }
+}

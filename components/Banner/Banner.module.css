@@ -1,0 +1,113 @@
+.banner {
+  position: relative;
+  width: 100%;
+  height: 50.8vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: opacity 500ms;
+}
+
+.banner__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  max-width: 700px;
+  top: 13vw;
+  padding: 0 60px;
+}
+.banner__content__logo {
+  width: 30vw;
+}
+.banner__content__movie_type {
+  display: none;
+}
+.banner__content__description {
+  color: white;
+  font-size: 1.4vw;
+  width: 32vw;
+  margin: 1.4vw 0;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+.banner__content__btn_container {
+  display: flex;
+}
+.banner__content__btn_container__mobileBtns {
+  display: none;
+}
+@media screen and (max-width: 1400px) {
+  .banner__content__description {
+    color: white;
+    font-size: 1.6vw;
+    width: 32vw;
+    margin: 1.4vw 0;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  }
+}
+@media screen and (max-width: 800px) {
+  .banner {
+    height: 70vh;
+    background-position: center;
+    margin-top: 52px;
+  }
+  .banner__content {
+    align-items: center;
+    bottom: 0;
+    top: 90%;
+    transform: translateY(-100%);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .banner__content__description {
+    display: none;
+  }
+  .banner__content__logo {
+    position: relative;
+    width: 70%;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  .banner__content__movie_type {
+    position: relative;
+    width: 100%;
+    display: flex;
+    color: white;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+  }
+  .banner__content__movie_type__type {
+    display: flex;
+    align-items: center;
+  }
+  .banner__content__movie_type__type:first-child
+    .banner__content__movie_type__type__dot {
+    display: none;
+  }
+  .banner__content__movie_type__type__dot {
+    position: relative;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: rgb(238, 132, 34);
+    margin: 0 5px;
+  }
+  .banner__content__btn_container {
+    display: none;
+  }
+  .banner__content__btn_container__mobileBtns {
+    display: flex;
+  }
+}
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

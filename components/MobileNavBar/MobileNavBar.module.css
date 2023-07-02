@@ -1,0 +1,133 @@
+.mobileNavBar {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 0 20px;
+  height: 52px;
+}
+.mobileNavBar__barsAndLogo {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.mobileNavBar__barsAndLogo__menuToggle {
+  display: inline-block;
+  margin-right: 20px;
+  background: none;
+  cursor: pointer;
+}
+.mobileNavBar__barsAndLogo i {
+  color: white;
+  font-size: 1.4rem;
+}
+.mobileNavBar__barsAndLogo__logo {
+  width: 80px;
+}
+.mobileNavBar__search {
+  font-size: 18px;
+  padding: 5px;
+  width: 120px;
+  background: rgb(34, 34, 34);
+  border: solid white 1px;
+  color: rgb(182, 182, 182);
+}
+.mobileNavBar__menu {
+  position: fixed;
+  top: 52px;
+  width: 55%;
+  height: calc(100vh - 47.6px);
+  z-index: 100;
+  left: 0;
+  background: #111;
+  animation: fromLeft 300ms;
+  font-size: 1rem;
+  overflow-y: scroll;
+}
+.mobileNavBar__menu__user {
+  position: relative;
+  border-bottom: solid grey 1px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+}
+.mobileNavBar__menu__user__profileImgAndUsername {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.mobileNavBar__menu__user__profileImgAndUsername img {
+  width: 30px;
+  margin-right: 10px;
+}
+.mobileNavBar__menu__user__profileImgAndUsername p {
+  font-weight: bold;
+  color: rgb(196, 196, 196);
+}
+.mobileNavBar__menu__user__buttons button,
+.mobileNavBar__menu__user__buttons a {
+  display: flex;
+  flex-direction: column;
+  background: none;
+  color: rgb(196, 196, 196);
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 8px 0;
+  text-align: left;
+}
+.mobileNavBar__menu__user__buttons button:hover,
+.mobileNavBar__menu__user__buttons a:hover {
+  text-decoration: underline;
+}
+.mobileNavBar__menuBackdrop {
+  position: fixed;
+  top: 51.15px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 43.6px);
+  background: rgba(0, 0, 0, 0.7);
+  animation: FadeIn 300ms;
+}
+.mobileNavBar__menu__links {
+  position: relative;
+  padding: 10px 20px;
+}
+.mobileNavBar__menu__links a {
+  display: block;
+  background: none;
+  color: rgb(196, 196, 196);
+  font-weight: bold;
+  text-decoration: none;
+  padding: 8px 0;
+}
+.mobileNavBar__menu__links a:hover {
+  text-decoration: underline;
+}
+@media screen and (min-width: 801px) {
+  .mobileNavBar {
+    display: none;
+  }
+}
+@keyframes fromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes FadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

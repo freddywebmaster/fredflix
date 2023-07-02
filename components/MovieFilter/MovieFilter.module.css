@@ -1,0 +1,127 @@
+.movieFilter {
+  position: fixed;
+  top: 90px;
+  display: flex;
+  color: white;
+  padding: 10px 60px;
+  width: 100%;
+  align-items: center;
+  z-index: 10;
+  transition: top 300ms, padding 300ms;
+  background: #141414;
+}
+.movieFilter h2 {
+  margin-right: 15px;
+}
+.movieFilter__scrolled {
+  top: 64.17px;
+}
+.movieFilter__filters {
+  position: relative;
+  margin-left: 20px;
+}
+.movieFilter__filtersToggle {
+  position: relative;
+  display: flex;
+  border: solid white 1px;
+  padding: 5px 10px;
+  align-items: center;
+  cursor: pointer;
+  background: none;
+  color: white;
+
+  font-size: 1.2rem;
+}
+.movieFilter__filtersToggle:hover {
+  background: #303030;
+}
+.movieFilter__filtersToggle i {
+  position: relative;
+  top: -3px;
+  margin-left: 10px;
+}
+.movieFilter__dropdown {
+  position: absolute;
+  left: 0;
+  border: solid white 1px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex-wrap: wrap;
+  width: 300px;
+  margin-top: 5px;
+  padding: 5px;
+  gap: 10px 15px;
+  background: #141414;
+}
+.movieFilter__dropdown__filter {
+  cursor: pointer;
+}
+.movieFilter__dropdown__filter button {
+  background: none;
+  color: white;
+  text-align: left;
+}
+.movieFilter__dropdown__filter:hover {
+  text-decoration: underline;
+}
+
+.movieFilter__activeFilter {
+  display: flex;
+  color: rgb(194, 194, 194);
+  align-items: center;
+  cursor: pointer;
+  background: none;
+}
+
+.movieFilter__activeFilter i {
+  margin-right: 5px;
+}
+
+.movieFilter__activeFilter:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 800px) {
+  .movieFilter {
+    top: 52px;
+    padding: 5px 20px;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+  }
+  .movieFilter h2 {
+    position: relative;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+  .movieFilter__filters {
+    margin-left: 0px;
+  }
+  .movieFilter__filtersToggle {
+    position: relative;
+    display: flex;
+    border: solid white 1px;
+    padding: 5px;
+    align-items: center;
+    cursor: pointer;
+    background: none;
+    color: white;
+    font-size: 1rem;
+  }
+  .movieFilter__dropdown {
+    position: fixed;
+    margin-left: 20px;
+    margin-right: 20px;
+    gap: 5px;
+    width: auto;
+  }
+  .movieFilter__dropdown__filter {
+    cursor: pointer;
+    padding: 7px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .movieFilter__dropdown {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

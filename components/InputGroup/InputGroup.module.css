@@ -1,0 +1,89 @@
+.input_group {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 30px 15px 15px 15px;
+  border: none;
+  background: rgb(22, 22, 22);
+  border-radius: 5px;
+  color: #f3f3f3;
+  margin: 20px 0;
+}
+
+.input_group input {
+  position: relative;
+  color: white;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 16px;
+  z-index: 1;
+}
+
+.input_group:focus-within {
+  background: rgb(34, 34, 34);
+}
+
+.input_group label {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  cursor: text;
+  color: #777;
+  z-index: 0;
+}
+
+.input_group:focus-within label,
+.input_group input:not(:placeholder-shown) ~ label {
+  top: 10px;
+  transform: translateY(0);
+  font-size: 12px;
+}
+
+.input__validation {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transform-origin: top;
+  animation: dropDown 300ms;
+  margin-top: 0;
+}
+.input__validation__field {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.input__validation__field__title {
+  margin-top: 0;
+  color: white;
+  margin-bottom: 5px;
+}
+.input__validation__field__list {
+  list-style-type: circle;
+  margin: 0;
+  padding: 0;
+}
+.input__validation__field__list__item {
+  color: #e50914;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+.input__validation__field__list__item::before {
+  content: "- ";
+}
+.input__validation__field__list__item_valid {
+  color: green;
+}
+
+@keyframes dropDown {
+  from {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
