@@ -28,7 +28,7 @@ verify.getInitialProps = async (context) => {
   let url =
     process.env.NODE_ENV === "development"
       ? "http://localhost:3000"
-      : process.env.DEPLOYMENT_URL;
+      : "https://fredflix-gt.netlify.app";
   const result = await fetch(`${url}/api/verify-account`, {
     method: "POST",
     headers: {

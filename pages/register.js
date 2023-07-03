@@ -76,7 +76,7 @@ export default function register() {
     let url =
       process.env.NODE_ENV === "development"
         ? "http://localhost:3000"
-        : process.env.DEPLOYMENT_URL;
+        : "https://fredflix-gt.netlify.app";
     console.time("Sign up time");
     try {
       const result = await fetch(`${url}/api/auth`, {
@@ -162,7 +162,7 @@ export async function getServerSideProps(context) {
   let url =
     process.env.NODE_ENV === "development"
       ? "http://localhost:3000"
-      : process.env.DEPLOYMENT_URL;
+      : "https://fredflix-gt.netlify.app";
   if (token) {
     const result = await fetch(`${url}/api/verify-token`, {
       method: "POST",

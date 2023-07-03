@@ -27,7 +27,7 @@ export default function GlobalState({ children }) {
   let url =
     process.env.NODE_ENV === "development"
       ? "http://localhost:3000"
-      : process.env.DEPLOYMENT_URL;
+      : "https://fredflix-gt.netlify.app";
 
   const [selectedMovie, dispatchSelectedMovie] = useReducer(
     selectedMovieReducer,
