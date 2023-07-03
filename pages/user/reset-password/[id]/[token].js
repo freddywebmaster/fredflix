@@ -33,7 +33,7 @@ export default function resetPassword() {
     let url =
       process.env.NODE_ENV === "development"
         ? "http://localhost:3000"
-        : "https://netplix-inky-five.vercel.app/";
+        : process.env.DEPLOYMENT_URL;
     const result = await fetch(`${url}/api/password-reset`, {
       method: "POST",
       headers: {

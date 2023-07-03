@@ -13,7 +13,7 @@ import ProjectContext from "../context/Project-context";
 let url =
   process.env.NODE_ENV === "development"
     ? "http://localhost:3000"
-    : "https://netplix-inky-five.vercel.app/";
+    : process.env.DEPLOYMENT_URL;
 export default function login() {
   const context = useContext(ProjectContext);
   const { handleLoginAsGuest } = context;

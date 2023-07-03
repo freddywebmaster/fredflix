@@ -90,7 +90,7 @@ export async function getServerSideProps(context) {
   let url =
     process.env.NODE_ENV === 'development'
       ? 'http://localhost:3000'
-      : 'https://netplix-inky-five.vercel.app/';
+      : process.env.DEPLOYMENT_URL;
   const token = await context.req.cookies.token;
   if (token) {
     const result = await fetch(`${url}/api/verify-token`, {

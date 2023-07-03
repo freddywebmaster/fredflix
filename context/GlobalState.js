@@ -27,7 +27,7 @@ export default function GlobalState({ children }) {
   let url =
     process.env.NODE_ENV === "development"
       ? "http://localhost:3000"
-      : "https://netplix-inky-five.vercel.app/";
+      : process.env.DEPLOYMENT_URL;
 
   const [selectedMovie, dispatchSelectedMovie] = useReducer(
     selectedMovieReducer,

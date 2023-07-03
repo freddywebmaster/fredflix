@@ -5,11 +5,14 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./NavBar.module.css";
 import Search from "../Search/Search";
+import { useRouter } from "next/router";
 const NavBar = memo(() => {
   const context = useContext(ProjectContext);
   const { username, profileImg } = context.userData;
   const [isScrolled, setIsScrolled] = useState(false);
   const { handleLogout, handleGetUserData } = context;
+  const router = useRouter();
+
   useEffect(() => {
     if (!username) handleGetUserData();
   }, []);
@@ -35,12 +38,12 @@ const NavBar = memo(() => {
       }
       id="navbar"
     >
-      <div className={styles.navbar__logoBig}>
+      <div onClick={() => router.push("/")} className={styles.navbar__logoBig}>
         <Image
           src={"/images/logo/netplix-logo.png"}
           alt=""
           width="112"
-          height="30" //30
+          height="30"
         />
       </div>
 
